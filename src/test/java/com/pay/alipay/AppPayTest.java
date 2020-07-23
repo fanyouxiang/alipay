@@ -73,7 +73,7 @@ public class AppPayTest {
         //生成二维码
         try {
             BitMatrix bitMatrix=new MultiFormatWriter().encode(content, BarcodeFormat.QR_CODE,width,height,hints);
-            Path file=new File("C:\\Users\\HP\\Desktop\\云象-中石化工作内容\\支付宝对接\\apppayqrcode.png").toPath();//将指定的二维码图片生成在指定的路径
+            Path file=new File("C:\\Users\\HP\\Desktop\\apppayqrcode.png").toPath();//将指定的二维码图片生成在指定的路径
             MatrixToImageWriter.writeToPath(bitMatrix,formt,file);
             System.out.println("生成成功");
         } catch (Exception e) {

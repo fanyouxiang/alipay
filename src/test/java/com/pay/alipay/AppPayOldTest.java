@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,7 +60,7 @@ public class AppPayOldTest {
             System.out.println("tradeNo:"+response.getTradeNo());
             System.out.println("msg:"+response.getMsg());
             System.out.println("code:"+response.getCode());
-            System.out.println("body:"+ URLDecoder.decode(response.getBody(),"utf-8"));
+            System.out.println("body:"+ response.getBody());
         } else {
             System.out.println("调用失败");
         }

@@ -34,6 +34,7 @@ public class AliPayController {
      * @return
      * @throws AlipayApiException
      */
+    //http://localhost:8080/pay/aliPay/123456744489/10000/大象/商品大象
     @GetMapping("/aliPay/{orderId}/{amount}/{product}/{body}")
     public String aliPay(@PathVariable String orderId,
                          @PathVariable String amount,
@@ -59,8 +60,10 @@ public class AliPayController {
                 + "\"subject\":\"" + product + "\","
                 + "\"body\":\"" + body + "\","
                 + "\"product_code\":\"FAST_INSTANT_TRADE_PAY\"}");
+        System.out.println("form:"+alipayClient.pageExecute(alipayPageRequest).getBody());
         //请求
-        return alipayClient.pageExecute(alipayPageRequest).getBody();
+//        return alipayClient.pageExecute(alipayPageRequest).getBody();
+        return "q";
     }
 
 }

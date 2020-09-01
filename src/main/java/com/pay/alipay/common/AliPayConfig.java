@@ -22,8 +22,8 @@ public class AliPayConfig {
     public static String notify_url="http://ngrok.sscai.club/alipay/aliPayNotify_url";
 
     // [沙箱环境]页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-    public static String return_url ="《支付成功跳转页面》";
-
+//    public static String return_url ="《支付成功跳转页面》";
+    public static String return_url ="http://123.56.71.178:20202/test";
     // [沙箱环境]
     public static String gatewayUrl ="https://openapi.alipaydev.com/gateway.do";
 

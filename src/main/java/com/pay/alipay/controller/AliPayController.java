@@ -62,8 +62,7 @@ public class AliPayController {
                 + "\"product_code\":\"FAST_INSTANT_TRADE_PAY\"}");
         System.out.println("form:"+alipayClient.pageExecute(alipayPageRequest).getBody());
         //请求
-//        return alipayClient.pageExecute(alipayPageRequest).getBody();
-        return "q";
+        return alipayClient.pageExecute(alipayPageRequest).getBody();
     }
 
 }

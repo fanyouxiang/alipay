@@ -5,6 +5,7 @@ import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
+import com.alipay.api.domain.ExtendParams;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.response.AlipayTradeAppPayResponse;
 import com.google.zxing.BarcodeFormat;
@@ -55,6 +56,9 @@ public class AppPayTest {
         model.setTimeoutExpress("30m");
         model.setTotalAmount("0.01");
         model.setProductCode("QUICK_MSECURITY_PAY");
+        ExtendParams extendParams = new ExtendParams();
+        extendParams.setSysServiceProviderId("2088831965271840");
+        model.setExtendParams(extendParams);
         request.setBizModel(model);
         //这里和普通的接口调用不同，使用的是sdkExecute
         System.out.println("request:"+ JSON.toJSONString(request));
